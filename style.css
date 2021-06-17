@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+body {
+  width: calc(100vw - 25rem);
+  background-color: #2a2a2a;
+  height: 100vh;
+  position: relative;
+}
+
+.side-bar {
+  height: 100vh;
+  width: 25rem;
+  background-color: #1f1f1f;
+  position: fixed;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-wrapper {
+  width: calc(100vw - 25rem - 3vw);
+  height: 85vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn-wrapper {
+  width: 40%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+.btn {
+  width: 100%;
+  height: 25%;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  font-family: "Segoe UI";
+  font-size: 1.1em;
+}
+
+.btn:hover {
+  width: 120%;
+}
+
+.upload {
+  background-color: #5028ea;
+}
+
+.reset {
+  background-color: #ea287c;
+}
+
+.download {
+  background-color: #1bba3b;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.controls div {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  text-align: left;
+  width: 120px;
+  color: white;
+  font-size: 17px;
+}
+
+.value {
+  width: 70px;
+  text-align: right;
+  color: rgb(194, 194, 194);
+  font-size: 17px;
+}
+
+input {
+  width: 150px;
+  height: 50px;
+  background: none;
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 12px;
+  background-color: #5028ea;
+  border-radius: 2rem;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 12px;
+  background-color: #2a2a2a;
+  border-radius: 2rem;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: #977cff;
+  border-radius: 100%;
+  border: none;
+}

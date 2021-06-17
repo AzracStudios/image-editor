@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image editor</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" defer></script>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="controls">
+        <div class="brightness">
+          <p for="brightness" class="title">Brightness</p>
+          <input type="range" class="brightness-slider" />
+          <p for="brightness-value" class="value">0%</p>
+        </div>
+
+        <div class="contrast">
+          <p for="contrast" class="title">Contrast</p>
+          <input type="range" class="contrast-slider" />
+          <p for="contrast-value" class="value">0%</p>
+        </div>
+
+        <div class="saturation">
+          <p for="saturation" class="title">Saturation</p>
+          <input type="range" class="saturation-slider" />
+          <p for="saturation-value" class="value">0%</p>
+        </div>
+
+        <div class="hueRotate">
+          <p for="hueRotate" class="title">Hue Rotate</p>
+          <input type="range" class="hueRotate-slider" value="0"/>
+          <p for="hueRotate-value" class="value">0%</p>
+        </div>
+
+        <div class="grayScale">
+          <p for="grayScale" class="title">Gray scale</p>
+          <input type="range" class="grayScale-slider" value="0"/>
+          <p for="grayScale-value" class="value">0%</p>
+        </div>
+
+        <div class="invert">
+          <p for="invert" class="title">Invert</p>
+          <input type="range" class="invert-slider" value="0"/>
+          <p for="invert-value" class="value">0%</p>
+        </div>
+
+        <div class="sepia">
+          <p for="sepia" class="title">Sepia</p>
+          <input type="range" class="sepia-slider" />
+          <p for="sepia-value" class="value">0%</p>
+        </div>
+
+        <div class="blur">
+          <p for="blur" class="title">Blur</p>
+          <input type="range" class="blur-slider" min="0" max="7" value="0" step="0.01"/>
+          <p for="blur-value" class="value">0%</p>
+        </div>
+      </div>
+
+      <div class="btn-wrapper">
+        <button
+          class="upload btn"
+          onclick="document.querySelector('.imgUpload').click()"
+        >
+          Upload
+        </button>
+        <input
+          type="file"
+          name="image"
+          accept="image/*"
+          class="imgUpload"
+          style="display: none"
+        />
+        <button class="reset btn" onclick="reset()">Reset</button>
+        <button class="download btn" onclick="downloadImage()">Download</button>
+      </div>
+    </div>
+
+    <div class="img-wrapper">
+      <img src="./background.jpg" alt="image" class="image" />
+    </div>
+  </body>
+</html>
